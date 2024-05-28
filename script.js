@@ -17,5 +17,6 @@ chooseFileBtn.addEventListener('input',()=>{
     img.onload = function() {
         canvas.height = canvas.width/(img.width/img.height) ;
         ctx.drawImage(img,0,0,canvas.width,canvas.height);
+        pixelArray = ctx.getImageData(0,0,canvas.width,canvas.height).data;
     }
 });
