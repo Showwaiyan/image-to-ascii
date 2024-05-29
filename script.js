@@ -20,3 +20,6 @@ chooseFileBtn.addEventListener('input',()=>{
         pixelArray = ctx.getImageData(0,0,canvas.width,canvas.height).data;
     }
 });
+
+// R,G,B color average
+function averageRGB(r,g,b) { return Math.trunc((r+g+b)/3)};
