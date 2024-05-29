@@ -11,7 +11,7 @@ const img = new Image();
 let pixelArray; // Data to store image's each pixel's r,b,g values
 
 // Ascii Character Values
-let asciiImage;
+let asciiImage="";
 
 // Image Source assigning
 chooseFileBtn.addEventListener('input',()=>{
@@ -29,6 +29,7 @@ function averageRGB(r,g,b) { return Math.trunc((r+g+b)/3)};
 
 // Substitute Character
 function substituteAsciiChar(avgRGB) {
+    console.log(avgRGB);
     if (256<avgRGB<=246) return 'Ñ';
     else if (246<avgRGB<=237) return '@';
     else if (237<avgRGB<=228) return '#';
@@ -61,10 +62,7 @@ function substituteAsciiChar(avgRGB) {
 
 // Processing Image to Ascii Character
 function processImgToAscii() {
-    for (let i=0; i<=pixelArray.length; i+=4) {
-        for (let j=0; j<=canvas.width; j++) {
+    for (let i=0; i<pixelArray.length; i+=4) {
             asciiImage += substituteAsciiChar(averageRGB(pixelArray[i],pixelArray[i+1],pixelArray[i+2]));
-        }
-        asciiImage += "\n";
     }
 }
