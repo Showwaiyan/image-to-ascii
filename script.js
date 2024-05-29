@@ -10,6 +10,9 @@ const chooseFileBtn = document.querySelector('input[type="file"]');
 const img = new Image();
 let pixelArray; // Data to store image's each pixel's r,b,g values
 
+// Ascii Character Values
+let asciiImage;
+
 // Image Source assigning
 chooseFileBtn.addEventListener('input',()=>{
     img.src = chooseFileBtn.value;
