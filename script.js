@@ -60,13 +60,11 @@ function substituteAsciiChar(avgRGB) {
 }
 
 // Processing Image to Ascii Character
-function processImgToAscii(pixelData) {
-    let asciiChar = "";
-    for (let i=0; i<=pixelData.length; i+=4) {
+function processImgToAscii() {
+    for (let i=0; i<=pixelArray.length; i+=4) {
         for (let j=0; j<=canvas.width; j++) {
-            asciiChar += substituteAsciiChar(averageRGB(pixelData[i],pixelData[i+1],pixelData[i+2]));
+            asciiImage += substituteAsciiChar(averageRGB(pixelArray[i],pixelArray[i+1],pixelArray[i+2]));
         }
-        asciiChar += "\n";
+        asciiImage += "\n";
     }
-    return asciiChar;
 }
