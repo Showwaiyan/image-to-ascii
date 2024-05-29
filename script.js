@@ -55,3 +55,15 @@ function substituteAsciiChar(avgRGB) {
     else if (21<avgRGB<=12) return '.';
     else if (12<avgRGB<=0) return '_';
 }
+
+// Processing Image to Ascii Character
+function processImgToAscii(pixelData) {
+    let asciiChar = "";
+    for (let i=0; i<=pixelData.length; i+=4) {
+        for (let j=0; j<=canvas.width; j++) {
+            asciiChar += substituteAsciiChar(averageRGB(pixelData[i],pixelData[i+1],pixelData[i+2]));
+        }
+        asciiChar += "\n";
+    }
+    return asciiChar;
+}
