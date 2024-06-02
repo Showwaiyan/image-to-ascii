@@ -31,7 +31,7 @@ function averageRGB(r,g,b) { return Math.trunc((r+g+b)/3)};
 // Substitute Character
 function substituteAsciiChar(avgRGB) {
     const asciiArray = " _.,-=+:;cba!0123456789$W#@Ñ".split('');
-    return asciiArray[(asciiArray.length*avgRGB)/255];
+    return asciiArray[Math.ceil(((asciiArray.length-1)*avgRGB)/255)];
 }
 
 // Processing Image to Ascii Character
