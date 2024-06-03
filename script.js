@@ -1,8 +1,7 @@
 // Global HTML Elements Variables
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
-
-const textarea = document.querySelector('textarea');
+ctx.fillStyle = "white";
 
 const chooseFileBtn = document.querySelector('input[type="file"]');
 
@@ -36,8 +35,5 @@ function substituteAsciiChar(avgRGB) {
 
 // Processing Image to Ascii Character
 function processImgToAscii() {
-    for (let i=0,j=0; i<pixelArray.length; i+=4,j++) {
-        asciiImage += substituteAsciiChar(averageRGB(pixelArray[i],pixelArray[i+1],pixelArray[i+2])); 
-    }
-    textArea.value = asciiImage;
+
 }
