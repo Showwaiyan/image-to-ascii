@@ -2,7 +2,7 @@
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
-const textArea = document.querySelector('textarea');
+const textarea = document.querySelector('textarea');
 
 const chooseFileBtn = document.querySelector('input[type="file"]');
 
@@ -16,7 +16,7 @@ let asciiImage="";
 // Image Source assigning
 chooseFileBtn.addEventListener('input',()=>{
     img.src = chooseFileBtn.value;
-    img.src = "/img/moon.jpg";
+    img.src = "/img/circle50.jpg";
     // Execution Instruction after loading img
     img.onload = function() {
         canvas.height = canvas.width/(img.width/img.height) ;
@@ -36,8 +36,8 @@ function substituteAsciiChar(avgRGB) {
 
 // Processing Image to Ascii Character
 function processImgToAscii() {
-    for (let i=0; i<pixelArray.length; i+=4) {
-            asciiImage += substituteAsciiChar(averageRGB(pixelArray[i],pixelArray[i+1],pixelArray[i+2]));
+    for (let i=0,j=0; i<pixelArray.length; i+=4,j++) {
+        asciiImage += substituteAsciiChar(averageRGB(pixelArray[i],pixelArray[i+1],pixelArray[i+2])); 
     }
     textArea.value = asciiImage;
 }
