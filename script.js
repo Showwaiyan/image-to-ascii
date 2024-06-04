@@ -8,6 +8,9 @@ const chooseFileBtn = document.querySelector('input[type="file"]');
 // size radio input
 const sizeEle = document.querySelector('#size');
 
+// Click button
+const clickBtn = document.querySelector('button');
+
 // Image Variables
 const img = new Image();
 let pixelArray; // Data to store image's each pixel's r,b,g values
@@ -18,7 +21,6 @@ let asciiImage="";
 // Image Source assigning
 chooseFileBtn.addEventListener('input',()=>{
     img.src = chooseFileBtn.value;
-    img.src = "/img/Linux_logo.jpg";
     // Execution Instruction after loading img
     img.onload = function() {
         canvas.width = 1080;
@@ -65,7 +67,3 @@ function processImgToAscii() {
         }
     }
 }
-
-// Testing
-document.querySelector('button').addEventListener('click',processImgToAscii);
-sizeEle.addEventListener('input',processImgToAscii);
