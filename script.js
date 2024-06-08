@@ -72,6 +72,11 @@ function processImgToAscii() {
     }
 }
 
+function download(){
+    downloadBtn.href = canvas.toDataURL("image/jpg",0.7);
+    downloadBtn.download = "ascii-photo.jpg";
+}
+
 // Click button to process
 clickBtn.addEventListener('click',processImgToAscii);
 
