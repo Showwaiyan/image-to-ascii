@@ -9,6 +9,20 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <section class="choose-sec">
+        <label for="img-choose">Choose Img</label>
+        <input type="file" accept=".jpg,.png" name="img-choose">
+    </section>
+
+    <canvas id="image-layer"></canvas>
+
+    <section class="process-sec">
+        <button>Click</button>
+    </section>
+
+    <section class="change-size-sec">
+        <input type="range" name="size" id="size" min="5" step="1" max="50">
+        <a href="">Download</a>
+    </section>
 </body>
 </html>
