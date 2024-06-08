@@ -74,3 +74,6 @@ function processImgToAscii() {
 
 // Click button to process
 clickBtn.addEventListener('click',processImgToAscii);
+
+// Size change process
+sizeEle.addEventListener('input',processImgToAscii);
