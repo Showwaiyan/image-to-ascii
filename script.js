@@ -2,7 +2,8 @@
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
-// btn
+const textArea = document.querySelector('textarea');
+
 const chooseFileBtn = document.querySelector('input[type="file"]');
 
 // size radio input
@@ -25,7 +26,6 @@ let asciiImage="";
 chooseFileBtn.addEventListener('input',()=>{
     img.src = chooseFileBtn.value;
     // Execution Instruction after loading img
-    img.src = "img/Linux_logo.jpg"
     img.onload = function() {
         canvas.width = 1080;
         canvas.height = canvas.width/(img.width/img.height) ;
@@ -71,3 +71,6 @@ function processImgToAscii() {
         }
     }
 }
+
+// Click button to process
+clickBtn.addEventListener('click',processImgToAscii);
