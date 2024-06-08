@@ -82,3 +82,6 @@ clickBtn.addEventListener('click',processImgToAscii);
 
 // Size change process
 sizeEle.addEventListener('input',processImgToAscii);
+
+// Download button process
+downloadBtn.addEventListener('click',download);
