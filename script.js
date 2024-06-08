@@ -11,6 +11,9 @@ const sizeEle = document.querySelector('#size');
 // Click button
 const clickBtn = document.querySelector('button');
 
+// Download button
+const downloadBtn = document.querySelector('a');
+
 // Image Variables
 const img = new Image();
 let pixelArray; // Data to store image's each pixel's r,b,g values
@@ -22,6 +25,7 @@ let asciiImage="";
 chooseFileBtn.addEventListener('input',()=>{
     img.src = chooseFileBtn.value;
     // Execution Instruction after loading img
+    img.src = "img/Linux_logo.jpg"
     img.onload = function() {
         canvas.width = 1080;
         canvas.height = canvas.width/(img.width/img.height) ;
