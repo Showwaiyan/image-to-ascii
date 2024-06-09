@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+/* Variable */
+:root {
+    --bgc-color: #EEEEEE;
+    --main-color: #686D76;
+    --secondary-color: #373A40;
+    --distinct-color: #DC5F00;
+}
+
 /* Layout */
 body {
     display: flex;
