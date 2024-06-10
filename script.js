@@ -29,9 +29,8 @@ chooseFileBtn.addEventListener('input',()=>{
     // Display none to img-choose button and
     // make visible to canvas and click-btn
     // chooseFileBtn.style.display = "none";
-    chooseFileLabel.style.display = "none";
-    canvas.style.display = "inline-block";
-    clickBtn.style.display = "inline-block";
+    displayOff(chooseFileLabel);
+    displayOn(canvas,clickBtn);
 
     // Execution Instruction after loading img
     img.onload = function() {
@@ -83,6 +82,13 @@ function processImgToAscii() {
 function download(){
     downloadBtn.href = canvas.toDataURL("image/jpg",0.7);
     downloadBtn.download = "ascii-photo.jpg";
+}
+
+function displayOn(...elements) {
+    for (const ele of elements) ele.style.display = "inline-block";
+}
+function displayOff(...elements) {
+    for (const ele of elements) ele.style.display = "none";
 }
 
 // Click button to process
