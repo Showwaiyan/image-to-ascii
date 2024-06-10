@@ -2,8 +2,7 @@
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
-const textArea = document.querySelector('textarea');
-
+// img-choose variable
 const chooseFileBtn = document.querySelector('input[type="file"]');
 const chooseFileLabel = document.querySelector('label');
 
