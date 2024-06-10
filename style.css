@@ -32,4 +32,21 @@ html {
     font-size: 16px;
 }
 
+label {
+    color: var(--bgc-color);
+}
+
 /* Style */
+
+input[type="file"] {
+    display: none;
+}
+label {
+    cursor: pointer;
+
+    background-color: var(--distinct-color);
+    
+    padding: 15px;
+
+    border-radius: 10px;
+}
