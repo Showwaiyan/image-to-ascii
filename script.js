@@ -5,6 +5,7 @@ const ctx = canvas.getContext('2d');
 const textArea = document.querySelector('textarea');
 
 const chooseFileBtn = document.querySelector('input[type="file"]');
+const chooseFileLabel = document.querySelector('label');
 
 // size radio input
 const sizeEle = document.querySelector('#size');
@@ -25,6 +26,14 @@ let asciiImage="";
 // Image Source assigning
 chooseFileBtn.addEventListener('input',()=>{
     img.src = chooseFileBtn.value;
+
+    // Display none to img-choose button and
+    // make visible to canvas and click-btn
+    // chooseFileBtn.style.display = "none";
+    chooseFileLabel.style.display = "none";
+    canvas.style.display = "inline-block";
+    clickBtn.style.display = "inline-block";
+
     // Execution Instruction after loading img
     img.onload = function() {
         canvas.width = 1080;
