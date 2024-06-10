@@ -25,6 +25,10 @@ body {
     min-height: 100vh;
 }
 
+input[type="file"] {
+    display: none;
+}
+
 /* Typography */
 
 html {
@@ -38,9 +42,6 @@ label {
 
 /* Style */
 
-input[type="file"] {
-    display: none;
-}
 label {
     cursor: pointer;
 
