@@ -61,6 +61,9 @@ function processImgToAscii() {
     // Size for resolution
     const size = Number(sizeEle.value);
 
+    displayOff(clickBtn);
+    displayOn(sizeEle,downloadBtn);
+
     for (let y=0; y<canvas.height; y+=size){
         for (let x=0; x<canvas.width; x+=size) {
             // Finding index and getting RGB value
