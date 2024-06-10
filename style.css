@@ -29,6 +29,22 @@ input[type="file"] {
     display: none;
 }
 
+canvas {
+    display: none;
+}
+
+button {
+    display: none;
+}
+
+input[type="range"] {
+    display: none;
+}
+
+a {
+    display: none;
+}
+
 /* Typography */
 
 html {
