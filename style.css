@@ -57,6 +57,9 @@ label {
 }
 
 /* Style */
+body {
+    background-color: var(--bgc-color);
+}
 
 label {
     cursor: pointer;
