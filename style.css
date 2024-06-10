@@ -67,7 +67,7 @@ canvas {
     border: 2px solid var(--main-color);
 }
 
-label {
+label,button {
     cursor: pointer;
 
     background-color: var(--distinct-color);
@@ -75,4 +75,11 @@ label {
     padding: 15px;
 
     border-radius: 10px;
+}
+
+button {
+    outline: none;
+    border: none;
+
+    margin-top: 10px;
 }
